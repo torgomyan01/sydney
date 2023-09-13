@@ -55,6 +55,11 @@
     content: "\f00d"
 }
 
+
+.fa-play:before {
+    content: "\f04b"
+}
+
 .fa-up-right-and-down-left-from-center:before {
     content: "\f424"
 }
