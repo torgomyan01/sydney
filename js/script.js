@@ -26,41 +26,42 @@ $('.gradient-card-running-line').each((index, elem) => {
 
 })
 
-const slider = $('.feedback-slider');
+const slider = $('.rich-commercial-slider');
+console.log(slider)
 
 slider.slick({
     centerMode: true,
-    prevArrow: $('#prev'),
-    nextArrow: $('#next'),
-    centerPadding: '120px',
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    // prevArrow: $('#prev'),
+    // nextArrow: $('#next'),
+    centerPadding: '450px',
+    slidesToShow: 1,
+    slidesToScroll: 1,
     infinite: true,
-    speed: 300,
-    responsive: [
-        {
-            breakpoint: 1025,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-            }
-        },
-        {
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 577,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerPadding: '20px',
-            }
-        }
-    ]
+    speed: 1000,
+    // responsive: [
+    //     {
+    //         breakpoint: 1025,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             slidesToScroll: 2,
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 769,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             slidesToScroll: 1,
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 577,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             slidesToScroll: 1,
+    //             centerPadding: '20px',
+    //         }
+    //     }
+    // ]
 });
 
 
@@ -68,13 +69,12 @@ slider.slick({
 const logo_number = document.querySelector('.logo-number')
 
 window.addEventListener('scroll', (e)=>{
-
     const scroly = window.scrollY;
     if(scroly >= 10){
-    logo_number.classList.remove('active')
+        logo_number.classList.remove('active')
     } else if(scroly <= 10){
-    logo_number.classList.add('active')
-        }
+        logo_number.classList.add('active')
+    }
 })
 
 //..... Gaps

@@ -1558,6 +1558,81 @@ header .button {
   border-bottom: 1px solid #949494;
 }
 
+.rich-commercial {
+  margin-top: 72px;
+}
+.rich-commercial-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.rich-commercial-title {
+  color: #000;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 107.5%;
+  text-transform: uppercase;
+  margin-right: 7.75rem;
+}
+.rich-commercial-subtitle {
+  color: #1D1F23;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 141.5%;
+}
+.rich-commercial-slider {
+  position: relative;
+}
+.rich-commercial-slider img {
+  margin: 0 50px;
+  transition: 1s;
+}
+.rich-commercial-slider img.slick-center {
+  transform: scale(1.2);
+}
+.rich-commercial .slick-track {
+  padding: 60px 0;
+}
+
+.slick-arrow {
+  font-size: 0;
+  border: 0;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #FF5B27;
+  position: relative;
+}
+
+.slick-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.slick-prev:after {
+  content: "\f060";
+  font-family: "Font Awesome 5 Pro", serif;
+  font-size: 21px;
+  color: #fff;
+}
+
+.slick-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 10;
+}
+.slick-next:after {
+  content: "\f061";
+  font-family: "Font Awesome 5 Pro", serif;
+  font-size: 21px;
+  color: #fff;
+}
+
 .uncompromising {
   margin-top: 43px;
 }

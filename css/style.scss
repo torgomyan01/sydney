@@ -1528,6 +1528,103 @@ margin-top: 30px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rich-commercial{
+  margin-top: 72px;
+  &-info{
+    @include flex('sb', 'c');
+    margin-bottom: 30px;
+  }
+  &-title{
+    color: #000;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 107.5%;
+    text-transform: uppercase;
+    margin-right: 7.75rem;
+  }
+
+  &-subtitle{
+    color: #1D1F23;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 141.5%;
+  }
+  &-slider{
+    position: relative;
+    img{
+      margin: 0 50px;
+      transition: 1s;
+      &.slick-center{
+        transform: scale(1.2);
+      }
+    }
+  }
+  .slick-track {
+    padding: 60px 0;
+  }
+}
+
+
+.slick-arrow{
+  font-size: 0;
+  border: 0;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #FF5B27;
+  position: relative;
+}
+
+.slick-prev{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  &:after{
+    content: "\f060";
+    font-family: "Font Awesome 5 Pro", serif;
+    font-size: 21px;
+    color: #fff;
+  }
+}
+.slick-next{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 10;
+  &:after{
+    content: "\f061";
+    font-family: "Font Awesome 5 Pro", serif;
+    font-size: 21px;
+    color: #fff;
+  }
+}
+
+
+
+
+
+
 //. ......... Comromising..
 
 .uncompromising{
