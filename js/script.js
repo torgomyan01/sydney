@@ -33,11 +33,11 @@ slider.slick({
     centerMode: true,
     // prevArrow: $('#prev'),
     // nextArrow: $('#next'),
-    centerPadding: '40px',
-    slidesToShow: 3,
+    centerPadding: '450px',
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-    speed: 300,
+    speed: 1000,
     // responsive: [
     //     {
     //         breakpoint: 1025,
