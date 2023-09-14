@@ -82,11 +82,29 @@ window.addEventListener('scroll', (e)=>{
 // if(window.screenX <= 576){
 //     gsap.registerPlugin(ScrollTrigger);
 //
-//     gsap.to(".box", {
+//     gsap.to(".box-gsap", {
 //         x: -500,
 //         scrollTrigger: {
-//             trigger: '.box',
+//             trigger: '.box-gsap',
 //             scrub: true,
+//             toggleActions: 'restart none none none',
+//         },
+//         duration: 1
+//     });
+//
+// }
+//
+
+// if(window.scrollX <= 576){
+//
+//     gsap.registerPlugin(ScrollTrigger);
+//     console.log(22)
+//     gsap.to(".box-content", {
+//         x: -400,
+//         scrollTrigger: {
+//             trigger: '.box-content',
+//             scrub: true,
+//             end: '-200%',
 //             toggleActions: 'restart none none none',
 //         },
 //         duration: 1
@@ -95,34 +113,17 @@ window.addEventListener('scroll', (e)=>{
 // }
 
 
-if(window.screenX <= 576){
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".content .box", {
-        x: -400,
-        scrollTrigger: {
-            trigger: '.content .box',
-            scrub: true,
-            end: '-200%',
-            toggleActions: 'restart none none none',
-        },
-        duration: 1
-    });
-
-}
-
-
 const sliders = document.getElementById('slider');
 const sliders2 = document.getElementById('slider2');
 const sliders3 = document.getElementById('slider3');
 const sliders4 = document.getElementById('slider4');
 const sliders5 = document.getElementById('slider5');
 
+
 noUiSlider.create(sliders2, {
     start: [38700000, 98700000],
     connect: true,
     format: wNumb({
-        prefix: '$ ',
         decimals: 0,
         thousand: ','
     }),
@@ -152,7 +153,6 @@ noUiSlider.create(sliders3, {
     connect: true,
     tooltips: true,
     format: wNumb({
-        prefix: '$ ',
         decimals: 0,
         thousand: ','
     }),
