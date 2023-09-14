@@ -115,6 +115,8 @@ if(window.screenX <= 576){
 const sliders = document.getElementById('slider');
 const sliders2 = document.getElementById('slider2');
 const sliders3 = document.getElementById('slider3');
+const sliders4 = document.getElementById('slider4');
+const sliders5 = document.getElementById('slider5');
 
 noUiSlider.create(sliders2, {
     start: [38700000, 98700000],
@@ -157,6 +159,34 @@ noUiSlider.create(sliders3, {
     range: {
         'min': 5000000,
         'max': 13000000
+    }
+});
+
+
+noUiSlider.create(sliders4, {
+    start: [56, 157],
+    connect: true,
+    tooltips: true,
+    format: wNumb({
+        decimals: 0,
+    }),
+    range: {
+        'min': 56,
+        'max': 157
+    }
+});
+
+noUiSlider.create(sliders5, {
+    start: [28, 94],
+    connect: true,
+    tooltips: true,
+    format: wNumb({
+        decimals: 1,
+        thousand: ','
+    }),
+    range: {
+        'min': 28,
+        'max': 94
     }
 });
 
