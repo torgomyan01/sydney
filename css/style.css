@@ -1331,4 +1331,43 @@ header .button {
   display: none;
 }
 
+.rich-commercial {
+  margin-top: 72px;
+}
+.rich-commercial-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.rich-commercial-title {
+  color: #000;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 107.5%;
+  text-transform: uppercase;
+  margin-right: 7.75rem;
+}
+.rich-commercial-subtitle {
+  color: #1D1F23;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 141.5%;
+}
+.rich-commercial-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rich-commercial-slider img {
+  margin: 0 40px;
+  transition: 0.3s;
+}
+.rich-commercial-slider img.slick-center {
+  transform: scale(1.2);
+}
+.rich-commercial .slick-track {
+  padding: 60px 0;
+}
+
 /*# sourceMappingURL=style.css.map */
