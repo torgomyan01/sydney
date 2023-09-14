@@ -22,11 +22,14 @@
   <script src="js/jquery.pep.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/wNumb.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="icons/icons.css">
   <link rel="stylesheet" href="css/slick.css">
   <link href="css/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/nouislider.css">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Sydney</title>
@@ -228,13 +231,412 @@
 
   </section>
 
-
   <section class="layouts">
 
+  <div class="container">
+
+    <h2 class="heading">
+      планировки
+    </h2>
+
+    <div class="inner">
+
+      <div class="box">
+        <h4 class="box-title">
+          Количество комнат
+        </h4>
+        <select class="box-select1" name="Выбрать" >
+          <option value="Выбрать">Выбрать</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5+">5+</option>
+        </select>
+        <div class="buttons">
+          <div class="button active">
+            <span>С</span>
+          </div>
+          <div class="button">
+            <span>1</span>
+          </div>
+          <div class="button">
+            <span>2</span>
+          </div>
+          <div class="button">
+            <span>3</span>
+          </div>
+          <div class="button">
+            <span>4</span>
+          </div>
+          <div class="button">
+            <span>5+</span>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h4 class="box-title">
+          Готовность до
+        </h4>
+        <select class="box-select" name="Выбрать" >
+          <option value="Выбрать">Выбрать</option>
+          <option value="Все">Все</option>
+          <option value="3 квартал 2024">3 квартал 2024</option>
+          <option value="3 квартал 2025">3 квартал 2025</option>
+        </select>
+      </div>
+      <div class="box">
+        <h4 class="box-title">Площадь,  м²</h4>
+        <div id="slider4"></div>
+      </div>
+      <div class="box">
+        <h4 class="box-title">Стоимость жилья, млн</h4>
+        <div id="slider4"></div>
+      </div>
+
+    </div>
+
+    <button class="btn-orange">
+      <span>Квартиры со скидкой</span>
+      <span class="percent">%</span>
+    </button>
+
+
+    <div class="row ">
+
+      <div class="col-lg-4 col-md-6 col-12 mb-md-0 mb-20">
+           <div class="col-box">
+             <div class="image" style="background-image: url('./image/card1.png')">
+             </div>
+            <div class="col-item">
+              <h4 class="col-heding">2-комнатная квартира, 58.6 м²</h4>
+              <p class="col-subtitle">2.1 корпус, 2 секция, 8 этаж, №53</p>
+              <div class="price-bloc">
+                <div class="ruler">
+                  <img src="image/ruler.png" alt="ruler">
+                </div>
+                <div>
+                  <h5 class="price price-orange">28 302 042 ₽</h5>
+                  <h5 class="fromer">33 302 042 ₽</h5>
+                  <span>В ипотеку от 83 525 ₽/месяц</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button active" >3 квартал 2024</button>
+                <button class="button" >Отделка White box</button>
+                <button class="button" >Скидка</button>
+                <button class="button" >Евроформат</button>
+                <button class="button" >Вид на променад</button>
+              </div>
+            </div>
+           </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+           <div class="col-box">
+             <div class="image" style="background-image: url('./image/card2.png')">
+             </div>
+            <div class="col-item">
+              <h4 class="col-heding">2-КОМНАТНАЯ КВАРТИРА, 56.5 М²</h4>
+              <p class="col-subtitle">2.1 корпус, 2 секция, 8 этаж, №53</p>
+              <div class="price-bloc">
+                <div class="ruler">
+                  <img src="image/ruler2.png" alt="ruler">
+                </div>
+                <div>
+                  <h5 class="price">28 302 042 ₽</h5>
+                  <h5 class="fromer">33 302 042 ₽</h5>
+                  <span>В ипотеку от 83 525 ₽/месяц</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button" >3 квартал 2024</button>
+                <button class="button" >Отделка White box</button>
+                <button class="button" >Скидка</button>
+                <button class="button" >Евроформат</button>
+                <button class="button" >Вид на променад</button>
+              </div>
+            </div>
+           </div>
+      </div>
+      <div class="col-lg-4 col-12 mt-lg-0 mt-20">
+           <div class="col-box">
+             <div class="image" style="background-image: url('./image/card3.png')">
+             </div>
+            <div class="col-item">
+              <h4 class="col-heding">2-комнатная квартира, 58.6 м²</h4>
+              <p class="col-subtitle">2.1 корпус, 2 секция, 8 этаж, №53</p>
+              <div class="price-bloc">
+                <div class="ruler">
+                  <img src="image/ruler2.png" alt="ruler">
+                </div>
+                <div>
+                  <h5 class="price">28 302 042 ₽</h5>
+                  <h5 class="fromer">33 302 042 ₽</h5>
+                  <span>В ипотеку от 83 525 ₽/месяц</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button" >3 квартал 2024</button>
+                <button class="button" >Отделка White box</button>
+                <button class="button" >Скидка</button>
+                <button class="button" >Евроформат</button>
+                <button class="button" >Вид на променад</button>
+              </div>
+            </div>
+           </div>
+      </div>
+
+
+    </div>
+
+    <div class="row mt-20">
+
+      <div class="col-lg-4 col-md-6 col-12 mb-md-0 mb-20">
+           <div class="col-box">
+             <div class="image" style="background-image: url('./image/card4.png')">
+             </div>
+            <div class="col-item">
+              <h4 class="col-heding">2-комнатная квартира, 58.6 м²</h4>
+              <p class="col-subtitle">2.1 корпус, 2 секция, 8 этаж, №53</p>
+              <div class="price-bloc">
+                <div class="ruler">
+                  <img src="image/ruler3.png" alt="ruler">
+                </div>
+                <div>
+                  <h5 class="price">28 302 042 ₽</h5>
+                  <h5 class="fromer">33 302 042 ₽</h5>
+                  <span>В ипотеку от 83 525 ₽/месяц</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button active" >3 квартал 2024</button>
+                <button class="button" >Отделка White box</button>
+                <button class="button" >Скидка</button>
+                <button class="button" >Евроформат</button>
+                <button class="button" >Вид на променад</button>
+              </div>
+            </div>
+           </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+           <div class="col-box">
+             <div class="image" style="background-image: url('./image/card5.png')">
+             </div>
+            <div class="col-item">
+              <h4 class="col-heding">2-КОМНАТНАЯ КВАРТИРА, 56.5 М²</h4>
+              <p class="col-subtitle">2.1 корпус, 2 секция, 8 этаж, №53</p>
+              <div class="price-bloc">
+                <div class="ruler">
+                  <img src="image/ruler2.png" alt="ruler">
+                </div>
+                <div>
+                  <h5 class="price">28 302 042 ₽</h5>
+                  <h5 class="fromer">33 302 042 ₽</h5>
+                  <span>В ипотеку от 83 525 ₽/месяц</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button" >3 квартал 2024</button>
+                <button class="button" >Отделка White box</button>
+                <button class="button" >Скидка</button>
+                <button class="button" >Евроформат</button>
+                <button class="button" >Вид на променад</button>
+              </div>
+            </div>
+           </div>
+      </div>
+      <div class="col-lg-4 col-12 mt-lg-0 mt-20">
+           <div class="col-box">
+             <div class="image" style="background-image: url('./image/card6.png')">
+             </div>
+            <div class="col-item">
+              <h4 class="col-heding">2-комнатная квартира, 58.6 м²</h4>
+              <p class="col-subtitle">2.1 корпус, 2 секция, 8 этаж, №53</p>
+              <div class="price-bloc">
+                <div class="ruler">
+                  <img src="image/ruler.png" alt="ruler">
+                </div>
+                <div>
+                  <h5 class="price">28 302 042 ₽</h5>
+                  <h5 class="fromer">33 302 042 ₽</h5>
+                  <span>В ипотеку от 83 525 ₽/месяц</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button" >3 квартал 2024</button>
+                <button class="button" >Отделка White box</button>
+                <button class="button" >Скидка</button>
+                <button class="button" >Евроформат</button>
+                <button class="button" >Вид на променад</button>
+              </div>
+            </div>
+           </div>
+      </div>
+
+
+    </div>
+
+    <button class="btn-orange btn-card">
+      <span class="ms-15">Еще квартиры</span>
+      <div class="next">
+        <i class="fa-sharp fa-light fa-arrow-right"></i>
+      </div>
+    </button>
+
+  </div>
+
+  </section>
+
+  <section class="map">
+
+    <div class="container">
+
+      <div class="inner">
+
+      <div class="content">
+
+        <div class="box">
+          <div class="box-title">
+            <h3>2</h3>
+            <span>мин.</span>
+          </div>
+          <p>Звенигородское шоссе</p>
+        </div>
+        <div class="box">
+          <div class="box-title">
+            <h3>3</h3>
+            <span>мин.</span>
+          </div>
+          <p>Северо-Западная хорда</p>
+        </div>
+        <div class="box">
+          <div class="box-title">
+            <h3>12</h3>
+            <span>мин.</span>
+          </div>
+          <p>Садовое кольцо</p>
+        </div>
+        <div class="box">
+          <div class="box-title">
+            <h3>11</h3>
+            <span>мин.</span>
+          </div>
+          <p>МКАД</p>
+        </div>
+
+      </div>
+
+      </div>
+
+    </div>
 
 
   </section>
 
+  <div class="light-gray">
+
+    <section class="how-to-buy">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-6">
+            <div class="col-box">
+              <h2 class="col-heading">КАК КУПИТЬ</h2>
+              <p class="col-subtitle">Что если мы скажем вам, что оформлять ипотеку может быть совсем
+                не страшно, а выплачивать её — легко и  комфортно?</p>
+              <div class="buttons">
+                <button class="button active">Ипотека</button>
+                <button class="button">Рассрочка </button>
+              </div>
+              <div class="box">
+                <span>Срок, лет</span>
+                <div id="slider"></div>
+              </div>
+              <div class="box">
+                <span>Стоимость недвижимости</span>
+                <div id="slider2"></div>
+              </div>
+              <div class="box">
+                <span>Первоначальный взнос</span>
+                <div id="slider3"></div>
+              </div>
+              <button class="btn-orange btn-how-to-buy">
+                <span class="ms-15">Еще квартиры</span>
+                <div class="next">
+                  <i class="fa-sharp fa-light fa-arrow-right"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="col-box">
+                    <h2 class="col-heading">
+                      ИПОТЕКА <br> СТАНДАРТНАЯ
+                    </h2>
+                    <div class="prices">
+                      <div class="price">
+                        <span>Процентная ставка</span>
+                        <h4>10,7%</h4>
+                      </div>
+                      <div class="price">
+                        <span>Ежемесячный платёж</span>
+                        <h4>40 558 ₽</h4>
+                      </div>
+                      <div class="price">
+                        <span>Переплата</span>
+                        <h4>5 340 200 ₽</h4>
+                      </div>
+                    </div>
+                    <div class="balance">
+                      <span>0 ₽</span>
+                      <button class="btn-balance">Без экономии</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-40">
+                  <div class="col-box">
+                    <h2 class="col-heading">
+                      ИПОТЕКА С гос. <br> поддержкой
+                    </h2>
+                    <div class="prices">
+                      <div class="price">
+                        <span>Процентная ставка</span>
+                        <h4>10,7%</h4>
+                      </div>
+                      <div class="price">
+                        <span>Ежемесячный платёж</span>
+                        <h4>40 558 ₽</h4>
+                      </div>
+                      <div class="price">
+                        <span>Переплата</span>
+                        <h4>5 340 200 ₽</h4>
+                      </div>
+                    </div>
+                    <div class="balance">
+                      <span>0 ₽</span>
+                      <button class="btn-balance">Экономия</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+  </div>
 
 
 </div>
