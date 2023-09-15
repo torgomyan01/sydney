@@ -94,7 +94,7 @@ window.addEventListener('scroll', (e)=>{
 
 //..... Gaps
 
-if ($(window).width() <= 576){
+if ($(window).width() <= 768){
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +129,7 @@ if ($(window).width() <= 768){
 
 }
 
-if ($(window).width() <= 576){
+if ($(window).width() <= 768){
 
     gsap.registerPlugin(ScrollTrigger);
 

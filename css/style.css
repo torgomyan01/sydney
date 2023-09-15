@@ -562,7 +562,7 @@ header .button {
   justify-content: space-between;
   overflow-y: hidden;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .gsap .inner .boxs {
     justify-content: left;
   }
@@ -577,6 +577,13 @@ header .button {
 @media (max-width: 768px) {
   .gsap .inner .boxs .box-gsap {
     margin-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .gsap .inner .boxs .box-gsap {
+    margin-right: 50px;
+    position: relative;
+    left: 90px;
   }
 }
 @media (max-width: 576px) {
@@ -1267,6 +1274,7 @@ header .button {
   .map .inner .content {
     display: flex;
     align-items: center;
+    justify-content: left;
     max-width: unset;
     overflow-x: hidden;
     position: relative;
@@ -1275,6 +1283,14 @@ header .button {
 }
 .map .inner .content .box-content {
   margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .map .inner .content .box-content {
+    margin-right: 100px;
+    margin-bottom: 0;
+    position: relative;
+    left: 80px;
+  }
 }
 @media (max-width: 576px) {
   .map .inner .content .box-content {
@@ -1838,7 +1854,7 @@ header .button {
   height: 0;
   border-radius: 0;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .uncompromising .inner {
     justify-content: left;
   }
@@ -1857,6 +1873,14 @@ header .button {
 }
 .uncompromising .inner .box-compromising:last-child {
   margin-right: 0;
+}
+@media (max-width: 768px) {
+  .uncompromising .inner .box-compromising {
+    width: 50%;
+    margin-right: 75px;
+    position: relative;
+    left: 110px;
+  }
 }
 @media (max-width: 576px) {
   .uncompromising .inner .box-compromising {
