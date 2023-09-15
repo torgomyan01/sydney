@@ -1528,23 +1528,7 @@ margin-top: 30px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//...... Rich
 
 .rich-commercial{
   margin-top: 72px;
@@ -1624,7 +1608,6 @@ margin-top: 30px;
 
 
 
-
 //. ......... Comromising..
 
 .uncompromising{
@@ -1650,11 +1633,12 @@ margin-top: 30px;
 
 .inner{
   display: flex;
-  align-items: center;
-
+  align-items: start;
+  justify-content: center;
+  overflow-x: auto;
   .box{
-    width: calc(25% - 90px);
-    margin-right: 90px;
+    width: calc(25% - 94px);
+    margin-right: 95px;
     &:last-child{
       margin-right: 0;
     }
@@ -1668,6 +1652,13 @@ margin-top: 30px;
         line-height: 107.5%; /* 69.875px */
         text-transform: uppercase;
         white-space: nowrap;
+        text-align: center;
+        @media (max-width: 992px) {
+          font-size: 45px;
+        }
+        @media (max-width: 768px) {
+          font-size: 35px;
+        }
       }
       samp{
         color: #000;
@@ -1675,12 +1666,17 @@ margin-top: 30px;
         font-style: normal;
         font-weight: 700;
         line-height: 122.5%; /* 34.3px */
+        margin-left: 8px;
+        white-space: nowrap;
       }
-      span{
+      p{
         color: #000;
         font-size: 22px;
         font-weight: 400;
-        line-height: 122.5%; /* 26.95px */
+        line-height: 122.5%;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -1694,3 +1690,40 @@ margin-top: 30px;
 
 //.......... Compromising End
 
+
+
+// ......... Gallery
+
+.gallery{
+  margin-top: 52px;
+.inner-gallery{
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 40px;
+  .gallery-box{
+    height: 374px;
+    width: 614px;
+    img{
+      width: 614px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .gallery-box-prev{
+    height: 374px;
+    width: 614px;
+    img{
+      width: 614px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
+
+
+}
+
+
+//............ Gelllery ENd

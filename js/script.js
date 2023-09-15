@@ -111,6 +111,23 @@ window.addEventListener('scroll', (e)=>{
 //     });
 //
 // }
+//
+//
+//
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".gallery-box", {
+        x: 400,
+        scrollTrigger: {
+            trigger: '.gallery-box',
+            scrub: true,
+        },
+        duration: 1
+    });
+
+
 
 
 const sliders = document.getElementById('slider');
