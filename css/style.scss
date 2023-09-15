@@ -97,7 +97,7 @@ a {
   url('../font/MabryPro-Bold.woff') format('woff'),
   url('../font/MabryPro-Bold.ttf') format('truetype');
   font-weight: bold;
-  
+  font-style: normal;
   font-display: swap;
 }
 
@@ -111,7 +111,7 @@ a {
   url('../font/MabryPro-Regular.woff') format('woff'),
   url('../font/MabryPro-Regular.ttf') format('truetype');
   font-weight: normal;
-  
+
   font-display: swap;
 }
 
@@ -195,7 +195,7 @@ header{
         a{
           color: var(--white);
           font-size: 28px;
-          
+
           font-weight: 700;
           line-height: 122.5%;
           @media (max-width: 576px) {
@@ -220,7 +220,7 @@ header{
         display: flex;
         color: var(--white);
         font-size: 28px;
-        
+
         font-weight: 700;
         line-height: 122.5%;
       }
@@ -239,7 +239,7 @@ header{
     .heading{
       color: var(--black);
       font-size: 65px;
-      
+
       font-weight: 700;
       line-height: 107.5%; /* 69.875px */
       text-transform: uppercase;
@@ -961,7 +961,7 @@ margin-top: 30px;
       .col-subtitle{
         color:  #949494;
         font-size: 16px;
-        
+
         font-weight: 400;
         line-height: 141.5%; /* 22.64px */
         @media (max-width: 576px) {
@@ -976,7 +976,7 @@ margin-top: 30px;
         .price{
           color: var(--black);
           font-size: 28px;
-          
+
           font-weight: 700;
           line-height: 122.5%; /* 34.3px */
           @media (max-width: 768px) {
@@ -1269,7 +1269,7 @@ margin-top: 30px;
       span{
         color: var(--black, #1D1F23);
         font-size: 28px;
-        
+
         font-weight: 700;
         line-height: 122.5%;
         @media (max-width: 576px) {
@@ -1679,7 +1679,7 @@ margin-top: 30px;
       samp{
         color: #000;
         font-size: 28px;
-        
+
         font-weight: 700;
         line-height: 122.5%; /* 34.3px */
         margin-left: 8px;
@@ -1712,29 +1712,51 @@ margin-top: 30px;
 
 .gallery{
   margin-top: 52px;
-.inner-gallery{
+.inner-gallery {
   display: flex;
   align-items: center;
+  justify-content: left;
   overflow-x: auto;
   gap: 40px;
-  .gallery-box{
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    border-radius: 0;
+  }
+
+  .gallery-box {
     height: 374px;
     width: 614px;
-    img{
+
+    img {
       width: 614px;
       height: 100%;
       object-fit: cover;
     }
   }
-  .gallery-box-prev{
-    height: 374px;
-    width: 614px;
-    img{
-      width: 614px;
-      height: 100%;
-      object-fit: cover;
+}
+  .inner-gallery-prev {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow-x: auto;
+    gap: 40px;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      border-radius: 0;
     }
-  }
+
+    .gallery-box-prev {
+      height: 374px;
+      width: 614px;
+
+      img {
+        width: 614px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
 
 }
 }
@@ -1747,6 +1769,7 @@ margin-top: 30px;
       margin-top: -100px;
     }
   }
+
 }
 
 

@@ -128,12 +128,27 @@ window.addEventListener('scroll', (e)=>{
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".gallery-box", {
-        x: 400,
+        x: -600,
+        duration: 3,
         scrollTrigger: {
             trigger: '.gallery-box',
             scrub: true,
         },
-        duration: 1
+        toggleActions : 'play none none none'
+    });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".gallery-box-prev", {
+        x: 600,
+        duration: 3,
+        scrollTrigger: {
+            trigger: '.gallery-box-prev',
+            scrub: true,
+            end: '200%'
+        },
+        toggleActions : 'onEnter none none none'
     });
 
 
