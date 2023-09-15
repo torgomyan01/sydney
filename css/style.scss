@@ -695,7 +695,8 @@ margin-top: 30px;
     width: 1071px;
     height: 512px;
     position: relative;
-    transition: 0.3s;
+    transition: 1s;
+    overflow: hidden;
     @media (max-width: 768px) {
       width: 800px;
       height: 450px;
@@ -725,6 +726,7 @@ margin-top: 30px;
         justify-content: center;
         align-items: center;
         margin-left: 20px;
+        margin-bottom: 30px;
         @media (max-width: 768px) {
           display: none;
         }
@@ -734,6 +736,10 @@ margin-top: 30px;
           border-radius: 50%;
           background: var(--black);
           margin-right: 8px;
+          transition: 0.3s;
+          &.active{
+            background: var(--orange);
+          }
           &:last-child{
             margin-right: 0;
           }
@@ -746,6 +752,14 @@ margin-top: 30px;
         padding: 25px 24px;
         display: flex;
         justify-content: start;
+        transform: translate(200%, 200%) rotate(-270deg);
+        transition: 1s;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        &.active{
+          transform: translate(0,0) rotate(0);
+        }
         @media (max-width: 768px) {
          margin-left: 17px;
         }

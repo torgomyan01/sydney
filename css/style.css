@@ -713,7 +713,8 @@ header .button {
   width: 1071px;
   height: 512px;
   position: relative;
-  transition: 0.3s;
+  transition: 1s;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .slider .col-box .image {
@@ -751,6 +752,7 @@ header .button {
   justify-content: center;
   align-items: center;
   margin-left: 20px;
+  margin-bottom: 30px;
 }
 @media (max-width: 768px) {
   .slider .col-box .image .inner .buttons {
@@ -763,6 +765,10 @@ header .button {
   border-radius: 50%;
   background: var(--black);
   margin-right: 8px;
+  transition: 0.3s;
+}
+.slider .col-box .image .inner .buttons .button.active {
+  background: var(--orange);
 }
 .slider .col-box .image .inner .buttons .button:last-child {
   margin-right: 0;
@@ -774,10 +780,18 @@ header .button {
   padding: 25px 24px;
   display: flex;
   justify-content: start;
+  transform: translate(200%, 200%) rotate(-270deg);
+  transition: 1s;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   color: var(--white);
   font-size: 22px;
   font-weight: 400;
   line-height: 122.5%; /* 26.95px */
+}
+.slider .col-box .image .inner .slider-text.active {
+  transform: translate(0, 0) rotate(0);
 }
 @media (max-width: 768px) {
   .slider .col-box .image .inner .slider-text {
