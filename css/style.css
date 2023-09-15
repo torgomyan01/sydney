@@ -11,6 +11,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
   background: linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
 }
 
@@ -70,17 +71,15 @@ a {
   width: 80px;
   height: 80px;
   margin-top: 90px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 141.5%; /* 22.64px */
 }
 @media (max-width: 576px) {
   .count {
     display: none;
   }
-}
-.count span {
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 141.5%; /* 22.64px */
 }
 
 @font-face {
@@ -606,11 +605,13 @@ header .button {
   position: relative;
 }
 .slider .col-box .image {
-  background: url("../image/slider1.png") center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   width: 1071px;
   height: 512px;
   position: relative;
+  transition: 0.3s;
 }
 @media (max-width: 768px) {
   .slider .col-box .image {
@@ -671,25 +672,23 @@ header .button {
   padding: 25px 24px;
   display: flex;
   justify-content: start;
-}
-@media (max-width: 768px) {
-  .slider .col-box .image .inner .slider-text {
-    margin-left: 17px;
-  }
-}
-.slider .col-box .image .inner .slider-text span {
   color: var(--white);
   font-size: 22px;
   font-weight: 400;
   line-height: 122.5%; /* 26.95px */
 }
 @media (max-width: 768px) {
-  .slider .col-box .image .inner .slider-text span {
+  .slider .col-box .image .inner .slider-text {
+    margin-left: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .slider .col-box .image .inner .slider-text {
     font-size: 20px;
   }
 }
 @media (max-width: 576px) {
-  .slider .col-box .image .inner .slider-text span {
+  .slider .col-box .image .inner .slider-text {
     font-size: 16px;
   }
 }
@@ -783,9 +782,6 @@ header .button {
   font-size: 18px;
   font-weight: 700;
   line-height: 141.5%; /* 25.47px */
-}
-.layouts .container .inner .box .noUi-horizontal .noUi-handle {
-  right: -13px;
 }
 .layouts .container .inner .box .noUi-handle:before, .layouts .container .inner .box .noUi-handle:after {
   display: none;
@@ -1776,12 +1772,43 @@ header .button {
 
 .burrow-class-last-block {
   position: relative;
-  margin-top: 50px;
 }
 @media (min-width: 1200px) {
   .burrow-class-last-block {
     margin-top: -100px;
   }
+}
+@media (min-width: 768px) {
+  .burrow-class-last-block {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .burrow-class-last-block-img {
+    margin-top: -50px;
+  }
+}
+
+.noUi-handle, .noUi-target {
+  border: 0;
+}
+
+.noUi-horizontal .noUi-handle {
+  right: -11px;
+  top: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noUi-horizontal .noUi-handle .noUi-touch-area {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.3s;
+}
+.noUi-horizontal .noUi-handle:hover .noUi-touch-area {
+  transform: scale(1.5);
 }
 
 .footer-section .image-footer {
