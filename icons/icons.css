@@ -60,9 +60,24 @@
     content: "\f04b"
 }
 
+.fa-whatsapp:before {
+    content: "\f232"
+}
+
+.fa-telegram:before {
+    content: "\f2c6"
+}
 
 .fa-arrow-right:before {
     content: "\f061"
+}
+
+.fa-arrow-up:before {
+    content: "\f062"
+}
+
+.fa-phone-arrow-down-left:before {
+    content: "\e223"
 }
 
 .fa-up-right-and-down-left-from-center:before {
