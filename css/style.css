@@ -1218,6 +1218,43 @@ header .button {
   background: url("../image/map.png") center no-repeat;
   background-size: cover;
   padding-top: 70px;
+  position: relative;
+}
+.map .plus-minus {
+  position: absolute;
+  right: 250px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 40px;
+  border: 1px solid #949494;
+  background: var(--black);
+  width: 68px;
+  height: 151px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2px;
+}
+@media (max-width: 1024px) {
+  .map .plus-minus {
+    right: 130px;
+  }
+}
+@media (max-width: 768px) {
+  .map .plus-minus {
+    display: none;
+  }
+}
+.map .plus-minus .border-plus {
+  background: rgba(148, 148, 148, 0.3);
+  height: 1px;
+  width: 99%;
+}
+.map .plus-minus i {
+  color: var(--white);
+  cursor: pointer;
+  font-size: 15px;
 }
 .map .inner .content {
   z-index: 5;
@@ -1226,7 +1263,7 @@ header .button {
   width: 100%;
   padding: 30px 20px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .map .inner .content {
     display: flex;
     align-items: center;
@@ -1816,7 +1853,7 @@ header .button {
 }
 .uncompromising .inner .box-compromising {
   width: calc(25% - 94px);
-  margin-right: 95px;
+  margin-right: 90px;
 }
 .uncompromising .inner .box-compromising:last-child {
   margin-right: 0;

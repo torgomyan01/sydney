@@ -76,6 +76,14 @@
     content: "\f062"
 }
 
+.fa-plus:before {
+    content: "\2b"
+}
+
+.fa-minus:before {
+    content: "\f068"
+}
+
 .fa-phone-arrow-down-left:before {
     content: "\e223"
 }
