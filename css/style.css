@@ -96,7 +96,6 @@ a {
   src: url("../font/MabryPro-Regular.eot");
   src: local("Mabry Pro"), local("MabryPro-Regular"), url("../font/MabryPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/MabryPro-Regular.woff2") format("woff2"), url("../font/MabryPro-Regular.woff") format("woff"), url("../font/MabryPro-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
   font-display: swap;
 }
 .btn-orange {
@@ -190,7 +189,6 @@ header .logo .logo-item .number {
 header .logo .logo-item .number a {
   color: var(--white);
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 122.5%;
 }
@@ -218,7 +216,6 @@ header .logo .logo-number.active {
   display: flex;
   color: var(--white);
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 122.5%;
 }
@@ -236,7 +233,6 @@ header .info {
 header .info .heading {
   color: var(--black);
   font-size: 65px;
-  font-style: normal;
   font-weight: 700;
   line-height: 107.5%; /* 69.875px */
   text-transform: uppercase;
@@ -1019,7 +1015,6 @@ header .button {
 .layouts .container .col-box .col-subtitle {
   color: #949494;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 141.5%; /* 22.64px */
 }
@@ -1036,7 +1031,6 @@ header .button {
 .layouts .container .col-box .price-bloc .price {
   color: var(--black);
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 122.5%; /* 34.3px */
 }
@@ -1314,7 +1308,6 @@ header .button {
 .how-to-buy .container .col-box .balance span {
   color: var(--black, #1D1F23);
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 122.5%;
 }
@@ -1568,6 +1561,11 @@ header .button {
   align-items: center;
   margin-bottom: 30px;
 }
+@media (max-width: 992px) {
+  .rich-commercial-info {
+    flex-direction: column;
+  }
+}
 .rich-commercial-title {
   color: #000;
   font-size: 45px;
@@ -1575,6 +1573,11 @@ header .button {
   line-height: 107.5%;
   text-transform: uppercase;
   margin-right: 7.75rem;
+}
+@media (max-width: 992px) {
+  .rich-commercial-title {
+    margin-bottom: 19px;
+  }
 }
 .rich-commercial-subtitle {
   color: #1D1F23;
@@ -1589,11 +1592,21 @@ header .button {
   margin: 0 50px;
   transition: 1s;
 }
+@media (max-width: 576px) {
+  .rich-commercial-slider img {
+    margin: 0 25px;
+  }
+}
 .rich-commercial-slider img.slick-center {
   transform: scale(1.2);
 }
 .rich-commercial .slick-track {
   padding: 60px 0;
+}
+@media (max-width: 1100px) {
+  .rich-commercial .slick-arrow {
+    display: none !important;
+  }
 }
 
 .slick-arrow {
@@ -1698,7 +1711,6 @@ header .button {
 .uncompromising .inner .box .box-title samp {
   color: #000;
   font-size: 28px;
-  font-style: normal;
   font-weight: 700;
   line-height: 122.5%; /* 34.3px */
   margin-left: 8px;
@@ -1760,6 +1772,16 @@ header .button {
   width: 614px;
   height: 100%;
   object-fit: cover;
+}
+
+.burrow-class-last-block {
+  position: relative;
+  margin-top: 50px;
+}
+@media (min-width: 1200px) {
+  .burrow-class-last-block {
+    margin-top: -100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

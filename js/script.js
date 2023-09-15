@@ -38,30 +38,39 @@ slider.slick({
     slidesToScroll: 1,
     infinite: true,
     speed: 1000,
-    // responsive: [
-    //     {
-    //         breakpoint: 1025,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 769,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 577,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             centerPadding: '20px',
-    //         }
-    //     }
-    // ]
+    autoplay: true,
+    responsive: [
+        {
+            breakpoint: 1352,
+            settings: {
+                centerPadding: '350px',
+            }
+        },
+        {
+            breakpoint: 1100,
+            settings: {
+                centerPadding: '250px',
+            }
+        },
+        {
+            breakpoint: 850,
+            settings: {
+                centerPadding: '150px',
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                centerPadding: '100px',
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                centerPadding: '50px',
+            }
+        },
+    ]
 });
 
 
