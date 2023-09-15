@@ -1721,8 +1721,14 @@ header .button {
 .gallery .inner-gallery {
   display: flex;
   align-items: center;
+  justify-content: left;
   overflow-x: auto;
   gap: 40px;
+}
+.gallery .inner-gallery::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  border-radius: 0;
 }
 .gallery .inner-gallery .gallery-box {
   height: 374px;
@@ -1733,11 +1739,23 @@ header .button {
   height: 100%;
   object-fit: cover;
 }
-.gallery .inner-gallery .gallery-box-prev {
+.gallery .inner-gallery-prev {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  overflow-x: auto;
+  gap: 40px;
+}
+.gallery .inner-gallery-prev::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  border-radius: 0;
+}
+.gallery .inner-gallery-prev .gallery-box-prev {
   height: 374px;
   width: 614px;
 }
-.gallery .inner-gallery .gallery-box-prev img {
+.gallery .inner-gallery-prev .gallery-box-prev img {
   width: 614px;
   height: 100%;
   object-fit: cover;
