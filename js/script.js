@@ -75,6 +75,12 @@ slider.slick({
 
 
 
+$(".fix-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "smoth");
+    return false;
+});
+
+
 const logo_number = document.querySelector('.logo-number')
 
 window.addEventListener('scroll', (e)=>{
@@ -88,41 +94,58 @@ window.addEventListener('scroll', (e)=>{
 
 //..... Gaps
 
-// if(window.screenX <= 576){
-//     gsap.registerPlugin(ScrollTrigger);
-//
-//     gsap.to(".box-gsap", {
-//         x: -500,
-//         scrollTrigger: {
-//             trigger: '.box-gsap',
-//             scrub: true,
-//             toggleActions: 'restart none none none',
-//         },
-//         duration: 1
-//     });
-//
-// }
-//
+if ($(window).width() <= 576){
 
-// if(window.scrollX <= 576){
-//
-//     gsap.registerPlugin(ScrollTrigger);
-//     console.log(22)
-//     gsap.to(".box-content", {
-//         x: -400,
-//         scrollTrigger: {
-//             trigger: '.box-content',
-//             scrub: true,
-//             end: '-200%',
-//             toggleActions: 'restart none none none',
-//         },
-//         duration: 1
-//     });
-//
-// }
-//
-//
-//
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".box-gsap", {
+        x: -350,
+        scrollTrigger: {
+            trigger: '.box-gsap',
+            scrub: true,
+            toggleActions: 'play none none none',
+        },
+        duration: 1
+    });
+
+
+}
+
+
+if ($(window).width() <= 576){
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".box-content", {
+        x: -350,
+        scrollTrigger: {
+            trigger: '.box-content',
+            scrub: true,
+            toggleActions: 'play none none none',
+        },
+        duration: 1
+    });
+
+
+}
+
+if ($(window).width() <= 576){
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".box-compromising", {
+        x: -350,
+        scrollTrigger: {
+            trigger: '.box-compromising',
+            scrub: true,
+            toggleActions: 'play none none none',
+        },
+        duration: 1
+    });
+
+
+}
+
 
 
     gsap.registerPlugin(ScrollTrigger);

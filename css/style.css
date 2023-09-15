@@ -564,12 +564,12 @@ header .button {
 }
 @media (max-width: 576px) {
   .gsap .inner .boxs {
-    justify-content: center;
+    justify-content: left;
   }
 }
 .gsap .inner .boxs::-webkit-scrollbar {
-  width: 5px;
-  height: 10px;
+  width: 0;
+  height: 0;
 }
 .gsap .inner .boxs .box-gsap {
   margin-right: 120px;
@@ -581,7 +581,9 @@ header .button {
 }
 @media (max-width: 576px) {
   .gsap .inner .boxs .box-gsap {
-    margin-right: 50px;
+    margin-right: 30px;
+    position: relative;
+    left: 150px;
   }
 }
 .gsap .inner .boxs .box-gsap:last-child {
@@ -1240,7 +1242,9 @@ header .button {
 @media (max-width: 576px) {
   .map .inner .content .box-content {
     margin-bottom: 0;
-    margin-right: 50px;
+    margin-right: 40px;
+    position: relative;
+    left: 60px;
   }
   .map .inner .content .box-content:last-child {
     margin-right: 0;
@@ -1272,6 +1276,10 @@ header .button {
   font-size: 22px;
   font-weight: 400;
   line-height: 122.5%; /* 26.95px */
+}
+.map .inner .content .box-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .light-gray {
@@ -1668,11 +1676,27 @@ header .button {
     margin-bottom: 19px;
   }
 }
+@media (max-width: 768px) {
+  .rich-commercial-title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 576px) {
+  .rich-commercial-title {
+    font-size: 25px;
+  }
+}
 .rich-commercial-subtitle {
   color: #1D1F23;
   font-size: 16px;
   font-weight: 400;
   line-height: 141.5%;
+}
+@media (max-width: 576px) {
+  .rich-commercial-subtitle {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 .rich-commercial-slider {
   position: relative;
@@ -1691,6 +1715,11 @@ header .button {
 }
 .rich-commercial .slick-track {
   padding: 60px 0;
+}
+@media (max-width: 576px) {
+  .rich-commercial .slick-track {
+    padding: 40px 0;
+  }
 }
 @media (max-width: 1100px) {
   .rich-commercial .slick-arrow {
@@ -1765,20 +1794,53 @@ header .button {
   display: flex;
   align-items: start;
   justify-content: center;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
-.uncompromising .inner .box {
+.uncompromising .inner::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  border-radius: 0;
+}
+@media (max-width: 576px) {
+  .uncompromising .inner {
+    justify-content: left;
+  }
+}
+.uncompromising .inner .box-compromising2 {
+  padding-left: 55px;
+}
+@media (max-width: 576px) {
+  .uncompromising .inner .box-compromising2 {
+    padding-left: 10px;
+  }
+}
+.uncompromising .inner .box-compromising {
   width: calc(25% - 94px);
   margin-right: 95px;
 }
-.uncompromising .inner .box:last-child {
+.uncompromising .inner .box-compromising:last-child {
   margin-right: 0;
 }
-.uncompromising .inner .box .box-title {
+@media (max-width: 576px) {
+  .uncompromising .inner .box-compromising {
+    width: 30%;
+    margin-right: 60px;
+    position: relative;
+    left: 90px;
+  }
+}
+@media (max-width: 475px) {
+  .uncompromising .inner .box-compromising {
+    margin-right: 70px;
+    width: 50%;
+    left: 70px;
+  }
+}
+.uncompromising .inner .box-compromising .box-title {
   display: flex;
   align-items: center;
 }
-.uncompromising .inner .box .box-title h2 {
+.uncompromising .inner .box-compromising .box-title h2 {
   color: #000;
   font-size: 65px;
   font-weight: 700;
@@ -1786,33 +1848,33 @@ header .button {
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
+  margin: 0 8px;
 }
 @media (max-width: 992px) {
-  .uncompromising .inner .box .box-title h2 {
+  .uncompromising .inner .box-compromising .box-title h2 {
     font-size: 45px;
   }
 }
 @media (max-width: 768px) {
-  .uncompromising .inner .box .box-title h2 {
+  .uncompromising .inner .box-compromising .box-title h2 {
     font-size: 35px;
   }
 }
-.uncompromising .inner .box .box-title samp {
+.uncompromising .inner .box-compromising .box-title samp {
   color: #000;
   font-size: 28px;
   font-weight: 700;
-  line-height: 122.5%; /* 34.3px */
-  margin-left: 8px;
+  line-height: 122.5%;
   white-space: nowrap;
 }
-.uncompromising .inner .box .box-title p {
+.uncompromising .inner .box-compromising .box-title p {
   color: #000;
   font-size: 22px;
   font-weight: 400;
   line-height: 122.5%;
 }
 @media (max-width: 768px) {
-  .uncompromising .inner .box .box-title p {
+  .uncompromising .inner .box-compromising .box-title p {
     font-size: 16px;
   }
 }
