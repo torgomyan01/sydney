@@ -4,6 +4,7 @@ const {
     active: 'active'
 }
 
+AOS.init();
 
 $('.gradient-card-running-line').each((index, elem) => {
     const gradientCardRunningLine = $(elem).text();
@@ -27,7 +28,6 @@ $('.gradient-card-running-line').each((index, elem) => {
 })
 
 const slider = $('.rich-commercial-slider');
-console.log(slider)
 
 slider.slick({
     centerMode: true,
@@ -234,3 +234,49 @@ noUiSlider.create(sliders5, {
 
 //........ Input Range
 //
+
+
+// sindey-prime-slider
+
+const sindeyPrimeSlider = $('.sindey-prime-slider');
+let sindeyPrimeSliderCount = 0;
+const sindeyPrimeSliderImages = [
+    {
+        url: 'image/slider1.png',
+        text: 'Закрытый двор с озеленением',
+    },
+    {
+        url: 'image/slider2.jpg',
+        text: 'Всестороннее благополучие ',
+    },
+    {
+        url: 'image/slider3.png',
+        text: 'Закрытый двор с озеленением',
+    },
+    {
+        url: 'image/slider4.png',
+        text: 'Планировка по высоким стандартам бизнес-класса',
+    },
+    {
+        url: 'image/slider5.png',
+        text: 'Фудхолл с фокусом на здоровое питание',
+    },
+]
+
+
+setInterval(() => {
+    sindeyPrimeSlider.css('background-image', `url(${sindeyPrimeSliderImages[sindeyPrimeSliderCount].url})`)
+    sindeyPrimeSlider.children('.count').text(`${sindeyPrimeSliderCount + 1}/${sindeyPrimeSliderImages.length}`)
+    sindeyPrimeSlider.children('.slider-text').text(`${sindeyPrimeSliderImages[sindeyPrimeSliderCount].text}`)
+
+
+
+
+    sindeyPrimeSliderCount++;
+    if(sindeyPrimeSliderCount === sindeyPrimeSliderImages.length){
+        sindeyPrimeSliderCount = 0;
+    }
+}, 1000)
+
+
+
