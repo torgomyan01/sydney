@@ -1,7 +1,9 @@
 const {
-    active
+    active,
+    none
 } = {
-    active: 'active'
+    active: 'active',
+    none: 'd-none'
 }
 
 AOS.init();
@@ -286,20 +288,69 @@ const sindeyPrimeSliderImages = [
     },
 ]
 
+sindeyPrimeSliderImages.forEach((item, index) => {
+    sindeyPrimeSlider.find('.buttons').append(`<div class="button ${index === 0 ? active : ''}"></div>`);
+    sindeyPrimeSlider.find('.slider-text-body').append(`<div class="slider-text ${index === 0 ? active : ''}">${item.text}</div>`);
+})
+
+
 
 setInterval(() => {
     sindeyPrimeSlider.css('background-image', `url(${sindeyPrimeSliderImages[sindeyPrimeSliderCount].url})`)
-    sindeyPrimeSlider.children('.count').text(`${sindeyPrimeSliderCount + 1}/${sindeyPrimeSliderImages.length}`)
-    sindeyPrimeSlider.children('.slider-text').text(`${sindeyPrimeSliderImages[sindeyPrimeSliderCount].text}`)
+    sindeyPrimeSlider.find('.count').text(`${sindeyPrimeSliderCount + 1}/${sindeyPrimeSliderImages.length}`)
+    // sindeyPrimeSlider.find('.slider-text').text(`${sindeyPrimeSliderImages[sindeyPrimeSliderCount].text}`)
 
-
-
+    sindeyPrimeSlider.find('.button').removeClass(active)[sindeyPrimeSliderCount].classList.add(active);
+    sindeyPrimeSlider.find('.slider-text').removeClass(active)[sindeyPrimeSliderCount].classList.add(active);
 
     sindeyPrimeSliderCount++;
     if(sindeyPrimeSliderCount === sindeyPrimeSliderImages.length){
         sindeyPrimeSliderCount = 0;
     }
-}, 1000)
+}, 3000)
 
 
+
+
+
+
+const fixButton = $('.fix-button');
+const fixButtonBtn = $('.fix-button-btn');
+
+const fixButtonStorageName = 'success-cookie';
+
+const fixButtonStorage = localStorage.getItem(fixButtonStorageName);
+
+fixButtonBtn.on('click', function (){
+    localStorage.setItem(fixButtonStorageName, 'true');
+    fixButton.addClass(none)
+})
+
+if(!fixButtonStorage){
+    fixButton.removeClass(none)
+}
+
+
+
+// GSAP NUMBERS
+
+const items = document.querySelectorAll(".number-animation");
+
+gsap.from(items, {
+    textContent: 0,
+    duration: 2,
+    ease: "power1.in",
+    snap: { textContent: 1 },
+    stagger: {
+        each: 1.0,
+        onUpdate: function() {
+            this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+        },
+    }
+});
+
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
