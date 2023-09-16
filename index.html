@@ -950,33 +950,36 @@
   <div class="modal fade " id="Modal-form" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header border-0">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="inner">
-            <div class="input-box">
-              <label >
-                <span>Ваше имя</span>
-                <input type="text">
-              </label>
+          <form action="#" class="form-sites">
+            <div class="inner">
+              <div class="input-box">
+                <label >
+                  <span>Ваше имя</span>
+                  <input type="text" name="Name">
+                </label>
+              </div>
+              <div class="input-box">
+                <label>
+                  <span>+7 (</span>
+                  <input type="text" name="Phone">
+                </label>
+              </div>
+              <div class="input-box">
+                <label>
+                  <span>E-mail</span>
+                  <input type="text" name="E-mail">
+                </label>
+              </div>
+              <input type="hidden" class="utm_campaign" name="utm_campaign">
+              <input type="hidden" class="utm_content" name="utm_content">
+              <input type="hidden" class="utm_term" name="utm_term">
             </div>
-            <div class="input-box">
-              <label >
-                <span>+7 (</span>
-                <input type="text">
-              </label>
-            </div>
-            <div class="input-box">
-              <label >
-                <span>Елена</span>
-                <input type="text">
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" >Отправить</button>
+            <button type="submit" class="btn btn-primary" >Отправить</button>
+          </form>
         </div>
       </div>
     </div>

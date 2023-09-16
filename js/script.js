@@ -366,3 +366,44 @@ setInterval(() => {
     $('.sec-count').text(countDown.seconds);
 }, 1000)
 
+
+const tgToken = 'bot6257124480:AAGDfdClfEPWGTDDAht-C6QjzlXrRJiNhb4';
+const chatID = '809580214';
+
+//utm_campaign - 95179887
+// utm_content - 14938138702
+// utm_term - жк панорама парк купить
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const utm_campaign = urlParams.get('utm_campaign')
+const utm_content = urlParams.get('utm_content')
+const utm_term = urlParams.get('utm_term')
+
+$('.utm_campaign').val(utm_campaign);
+$('.utm_content').val(utm_content);
+$('.utm_term').val(utm_term);
+
+
+$('.form-sites').on('submit', function (e){
+    e.preventDefault();
+    const data = $(e.target).serialize().replace(/=/g, ': ').replace(/&/g, '\n\r');
+    console.log(data);
+
+
+    $.ajax({
+        url: `https://api.telegram.org/${tgToken}/sendMessage`,         /* Куда отправить запрос */
+        method: 'get',             /* Метод запроса (post или get) */
+        dataType: 'html',          /* Тип данных в ответе (xml, json, script, html). */
+        data: {
+            chat_id: chatID,
+            parse_mode: 'html',
+            text: data
+        },
+        success: function(data){   /* функция которая будет выполнена после успешного запроса.  */
+            console.log(data)
+        }
+    });
+})
+
