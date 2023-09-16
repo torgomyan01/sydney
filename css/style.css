@@ -1675,6 +1675,9 @@ header .button {
   font-size: 16px;
   font-weight: 400;
   line-height: 141.5%; /* 22.64px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .how-to-buy .row-timer .col-box-time .timer .image {
   margin-top: -30px;
