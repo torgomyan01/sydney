@@ -234,8 +234,9 @@ a {
 
 .modal{
 
+  backdrop-filter: blur(5px);
   .modal-content{
-    background: #949494;
+    background: #3A3D45;
   }
 
   .btn-primary{
@@ -263,7 +264,7 @@ a {
           margin-bottom: 15px;
           background: transparent;
           span{
-            color: #3A3D45;
+            color: #FFF;
             font-size: 16px;
             font-weight: 400;
             line-height: 141.5%; /* 22.64px */
@@ -271,11 +272,11 @@ a {
           }
           input{
             width: 100%;
-            border-right: 1px solid  #B5B3B7;
-            border-bottom: 1px solid #B5B3B7;
-            border-left: 1px solid #B5B3B7;
+            border-right: 1px solid  #FFF;
+            border-bottom: 1px solid #FFF;
+            border-left: 1px solid #FFF;
             padding: 5px;
-            color: #3A3D45;
+            color: #FFF;
             font-size: 16px;
             font-weight: 400;
             line-height: 141.5%;

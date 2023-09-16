@@ -24,6 +24,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="js/wNumb.min.js"></script>
   <script src="js/nouislider.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="icons/icons.css">
@@ -569,7 +570,7 @@
                       </h2>
                       <div class="timer">
                         <div class="time">
-                          <h3>7</h3>
+                          <h3 class="day-count">7</h3>
                           <span>дней</span>
                         </div>
                         <div class="image">
@@ -578,6 +579,8 @@
                         <div class="time">
                           <h3>09</h3>
                           <span class="ms-1">часов</span>
+                          <h3 class="hour-count">09</h3>
+                          <span>часов</span>
                         </div>
                         <div class="image">
                           <img src="image/time-icon.png" width="6" height="20" alt="">
@@ -585,12 +588,16 @@
                         <div class="time">
                           <h3>09</h3>
                           <span>минут</span>
+                          <h3 class="min-count">09</h3>
+                          <span>минут</span>
                         </div>
                         <div class="image">
                           <img src="image/time-icon.png" width="6" height="20" alt="">
                         </div>
                         <div class="time">
                           <h3>34</h3>
+                          <span>секунды</span>
+                          <h3 class="sec-count">34</h3>
                           <span>секунды</span>
                         </div>
                       </div>
@@ -949,33 +956,36 @@
   <div class="modal fade " id="Modal-form" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header border-0">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="inner">
-            <div class="input-box">
-              <label >
-                <span>Ваше имя</span>
-                <input type="text">
-              </label>
+          <form action="#" class="form-sites">
+            <div class="inner">
+              <div class="input-box">
+                <label >
+                  <span>Ваше имя</span>
+                  <input type="text" name="Name">
+                </label>
+              </div>
+              <div class="input-box">
+                <label>
+                  <span>+7 (</span>
+                  <input type="text" name="Phone">
+                </label>
+              </div>
+              <div class="input-box">
+                <label>
+                  <span>E-mail</span>
+                  <input type="text" name="E-mail">
+                </label>
+              </div>
+              <input type="hidden" class="utm_campaign" name="utm_campaign">
+              <input type="hidden" class="utm_content" name="utm_content">
+              <input type="hidden" class="utm_term" name="utm_term">
             </div>
-            <div class="input-box">
-              <label >
-                <span>+7 (</span>
-                <input type="text">
-              </label>
-            </div>
-            <div class="input-box">
-              <label >
-                <span>Елена</span>
-                <input type="text">
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" >Отправить</button>
+            <button type="submit" class="btn btn-primary" >Отправить</button>
+          </form>
         </div>
       </div>
     </div>
