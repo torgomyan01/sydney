@@ -354,3 +354,15 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+
+setInterval(() => {
+    const endOfMonth = moment().endOf('month');
+    const countDown = moment.duration(endOfMonth.diff(moment()))._data;
+
+
+    $('.day-count').text(countDown.days);
+    $('.hour-count').text(countDown.hours);
+    $('.min-count').text(countDown.minutes);
+    $('.sec-count').text(countDown.seconds);
+}, 1000)
+
