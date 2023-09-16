@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#00CF91">
-  <meta name="msapplication-navbutton-color" content="#00CF91">
+  <meta name="msapplication-navbutton-color" content="#1D1F23">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="#00CF91">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1D1F23">
 
   <!--  SUPPORT FAVICON ALL TOUCH-->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -83,7 +83,7 @@
           <span>1/4</span>
         </div>
 
-        <div class="sale">
+        <div class="sale" data-aos="fade-right" data-aos-duration="1000">
           <div>
             <p>до</p>
             <h4>16 <samp>%</samp></h4>
@@ -468,12 +468,12 @@
 
     </div>
 
-    <button class="btn-orange btn-card">
+    <div class="btn-orange btn-card">
       <span class="ms-15">Еще квартиры</span>
       <div class="next">
         <i class="fa-sharp fa-light fa-arrow-right"></i>
       </div>
-    </button>
+    </div>
 
   </div>
 
@@ -560,12 +560,12 @@
                 <span>Первоначальный взнос</span>
                 <div id="slider3"></div>
               </div>
-              <button class="btn-orange btn-how-to-buy">
+              <div class="btn-orange btn-how-to-buy">
                 <span class="ms-15">Еще квартиры</span>
                 <div class="next">
                   <i class="fa-sharp fa-light fa-arrow-right"></i>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
 
@@ -686,12 +686,12 @@
                           </label>
                         </div>
                       </div>
-                      <button class="btn-orange btn-how-to-buy2">
+                      <div class="btn-orange btn-how-to-buy2">
                         <span class="ms-15">Еще квартиры</span>
                         <div class="next">
                           <i class="fa-sharp fa-light fa-arrow-right"></i>
                         </div>
-                      </button>
+                      </div>
                       <p class="title-time">
                         Нажимая кнопку «Отправить заявку» вы <a href="#">
                         даёте согласие на обработку персональных данных.
@@ -942,7 +942,7 @@
             </div>
 
             <div class="button-logo">
-              <div class="button">
+              <div class="button" data-bs-toggle="modal" data-bs-target="#Modal-form">
                   <span>Оставить заявку</span>
                   <div class="arrow-right">
                   <i class="fa-sharp fa-light fa-arrow-right"></i>
@@ -1015,6 +1015,41 @@
 
 
   </footer>
+
+  <div class="modal fade " id="Modal-form" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="inner">
+            <div class="input-box">
+              <label >
+                <span>Ваше имя</span>
+                <input type="text">
+              </label>
+            </div>
+            <div class="input-box">
+              <label >
+                <span>+7 (</span>
+                <input type="text">
+              </label>
+            </div>
+            <div class="input-box">
+              <label >
+                <span>Елена</span>
+                <input type="text">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" >Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="fix-button">
     <span>Мы используем куки</span>

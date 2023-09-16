@@ -213,6 +213,52 @@ a {
   }
 }
 
+.modal .modal-content {
+  background: #949494;
+}
+.modal .btn-primary {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--light-gray);
+}
+.modal .btn:first-child:active {
+  background: var(--light-gray);
+}
+.modal .modal-body .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal .modal-body .inner .input-box {
+  width: 100%;
+}
+.modal .modal-body .inner .input-box label {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  background: transparent;
+}
+.modal .modal-body .inner .input-box label span {
+  color: #3A3D45;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 141.5%; /* 22.64px */
+  margin-left: 10px;
+}
+.modal .modal-body .inner .input-box label input {
+  width: 100%;
+  border-right: 1px solid #B5B3B7;
+  border-bottom: 1px solid #B5B3B7;
+  border-left: 1px solid #B5B3B7;
+  padding: 5px;
+  color: #3A3D45;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 141.5%;
+  background: transparent;
+}
+
 header {
   position: relative;
   background: url("../image/header-bg1.png") center no-repeat;
