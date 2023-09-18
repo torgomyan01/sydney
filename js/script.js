@@ -261,6 +261,50 @@ noUiSlider.create(sliders5, {
 //
 
 
+//............ Header Slider
+
+const HeaderSlider = $('.header');
+let HeaderSliderCount = 0;
+
+const HeaderImages = [
+    {
+        url: 'image/header-bg1.png',
+        text: `Жилой квартал ,  <br/>  который заботится  <br/> о вашем благополучии`
+    },
+    {
+        url: 'image/header-bg2.png',
+        text: `Утонченный вкус <br/>  и премиальные <br/> решения`,
+    },
+    {
+        url: 'image/header-bg3.png',
+        text: `Инновационные <br/> инженерные решения <br/> для здоровья, удобства <br/> и комфорта`,
+    },
+    {
+        url: 'image/header-bg4.png',
+        text: `Удобное расположение  <br/> в оживленной части  <br/> цветного бульвара,  <br/> рядом с метро`,
+    },
+
+]
+
+HeaderImages.forEach((item, index) => {
+    HeaderSlider.find('.slider-text-body').append(`<h2 class="heading ${index === 0 ? active : ''}">${item.text}</h2>`);
+})
+
+setInterval(() => {
+    HeaderSlider.css('background-image', `url(${HeaderImages[HeaderSliderCount].url})`)
+    HeaderSlider.find('.count').text(`${HeaderSliderCount + 1}/${HeaderImages.length}`)
+
+    HeaderSlider.find('.heading').removeClass(active)[HeaderSliderCount].classList.add(active);
+
+    HeaderSliderCount++;
+    if(HeaderSliderCount === HeaderImages.length){
+        HeaderSliderCount = 0;
+    }
+}, 3000)
+
+
+
+
 // sindey-prime-slider
 
 const sindeyPrimeSlider = $('.sindey-prime-slider');
@@ -287,6 +331,9 @@ const sindeyPrimeSliderImages = [
         text: 'Фудхолл с фокусом на здоровое питание',
     },
 ]
+
+
+
 
 sindeyPrimeSliderImages.forEach((item, index) => {
     sindeyPrimeSlider.find('.buttons').append(`<div class="button ${index === 0 ? active : ''}"></div>`);

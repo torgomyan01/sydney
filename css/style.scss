@@ -297,9 +297,10 @@ a {
 
 header{
   position: relative;
-  background: url("../image/header-bg1.png") center no-repeat;
+  background: center no-repeat;
   background-size: cover;
   min-height: 110vh;
+  transition: .3s;
   @media (max-width: 576px) {
     min-height: 70vh;
   }
@@ -392,16 +393,25 @@ header{
         justify-content: center;
       padding-top: 100px;
     }
+    .slider-text-body{
+      margin-bottom: 53px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
     .heading{
       color: var(--black);
       font-size: 65px;
-
+      display: none;
       font-weight: 700;
       line-height: 107.5%; /* 69.875px */
       text-transform: uppercase;
       max-width: 1000px;
       width: 100%;
       margin-bottom: 53px;
+      &.active{
+        display: initial;
+      }
       @media (max-width: 1024px) {
         font-size: 50px;
       }
