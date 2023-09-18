@@ -607,26 +607,32 @@
                           Укажите телефон или email и мы расскажем вам подробнее
                           про планировки, преимущества и условия приобретения.
                         </p>
-                      <div class="inner">
-                        <div class="input-box">
-                          <label >
-                            <span>Ваше имя</span>
-                            <input type="text">
-                          </label>
+                      <form action="#" class="form-sites">
+                        <div class="inner">
+                          <div class="input-box">
+                            <label>
+                              <span>Ваше имя</span>
+                              <input type="text" name="Name">
+                            </label>
+                          </div>
+                          <div class="input-box">
+                            <label >
+                              <span>+7 (</span>
+                              <input type="text" name="Phone">
+                            </label>
+                          </div>
                         </div>
-                        <div class="input-box">
-                          <label >
-                            <span>+7 (</span>
-                            <input type="text">
-                          </label>
-                        </div>
-                      </div>
-                      <div class="btn-orange btn-how-to-buy2">
-                        <span class="ms-15">Еще квартиры</span>
-                        <div class="next">
-                          <i class="fa-sharp fa-light fa-arrow-right"></i>
-                        </div>
-                      </div>
+                        <input type="hidden" class="utm_campaign" name="utm_campaign">
+                        <input type="hidden" class="utm_content" name="utm_content">
+                        <input type="hidden" class="utm_term" name="utm_term">
+                        <button type="submit" class="btn-orange btn-how-to-buy2">
+                          <span class="ms-15">Оставить заявку</span>
+                          <span class="next">
+                            <i class="fa-sharp fa-light fa-arrow-right"></i>
+                          </span>
+                        </button>
+
+                      </form>
                       <p class="title-time">
                         Нажимая кнопку «Отправить заявку» вы <a href="#">
                         даёте согласие на обработку персональных данных.
@@ -951,7 +957,7 @@
 
   </footer>
 
-  <div class="modal fade " id="Modal-form" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal fade" id="Modal-form" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-0">
